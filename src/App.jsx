@@ -1,10 +1,17 @@
-function App() {
+import React from 'react';
+import Navbar from './components/Nabvar';
+import './styles/App.scss';
+import './styles/Global.scss';
 
+const App = () => {
   return (
-    <>
-    <h1>IMMERSIVE EXPERIENCES THAT DELIVER</h1>
-    </>
-  )
-}
+    <div className="app">
+      <div className="background">
+        <Navbar />
+      </div>
 
-export default App
+    </div>
+  );
+};
+
+export default App;
