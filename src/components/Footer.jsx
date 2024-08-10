@@ -1,5 +1,6 @@
 import '../styles/Footer.scss';
 import '../styles/Footer.scss';
+import Logo from "./Logo"; 
 
 // Importación de los íconos SVG
 import FacebookIcon from '../assets/img/icons/icon-facebook.svg';
@@ -20,7 +21,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer__content">
         <div className="footer__left">
-          <h2 className="footer__logo">loopstudios</h2>
+        <Logo />
           <ul className="footer__links">
             {links.map((link, index) => (
               <li key={index}>
