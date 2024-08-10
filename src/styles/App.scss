@@ -1,0 +1,14 @@
+.app {
+    font-family: 'Arial, sans-serif';
+  
+    .background {
+      position: relative;
+      height: 100vh;
+      background: url('../assets/img/desktop/image-hero.jpg') no-repeat center center/cover;
+  
+      .navbar {
+        background: transparent;
+      }
+  
+    }
+  }
