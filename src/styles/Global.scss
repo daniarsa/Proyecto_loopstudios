@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
 body {
     margin: 0;
     padding: 0;
@@ -10,3 +13,19 @@ body {
   *::after {
     box-sizing: inherit;
   }
+
+// Variables de Colores
+// $white: hsl(0, 0%, 100%);
+// $black: hsl(0, 0%, 0%);
+// $dark-gray: hsl(0, 0%, 55%);
+// $very-dark-gray: hsl(0, 0%, 41%);
+
+// Variables de Tipografía
+// $font-body: 'Alata', sans-serif;
+// $font-heading: 'Josefin Sans', sans-serif;
+
+// $font-size-body: 15px;
+
+// Layout de página
+// $mobile-width: 375px;
+// $desktop-width: 1440px;
