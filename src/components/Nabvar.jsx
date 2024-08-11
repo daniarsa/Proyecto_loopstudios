@@ -1,12 +1,19 @@
 import React, { useState } from 'react';
-import Logo from "./Logo"; // Ruta relativa corregida
+import Logo from "./Logo";
 import NavLink from "./NavLink";
-import "../styles/Nabvar.scss"; // Ruta relativa para el archivo SCSS
+import "../styles/Nabvar.scss"; 
 
 
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const links = [
+    { href: "#about", text: "About" },
+    { href: "#careers", text: "Careers" },
+    { href: "#events", text: "Events" },
+    { href: "#products", text: "Products" },
+    { href: "#support", text: "Support" }
+  ];
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -17,11 +24,11 @@ const Navbar = () => {
       <Logo />
       <nav className={`navbar__menu ${isMenuOpen ? 'navbar__menu--open' : ''}`}>
         <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#careers">Careers</a></li>
-          <li><a href="#events">Events</a></li>
-          <li><a href="#products">Products</a></li>
-          <li><a href="#support">Support</a></li>
+          {links.map((link, index) => (
+            <li key={index}>
+              <NavLink href={link.href} text={link.text} />
+            </li>
+          ))}
         </ul>
       </nav>
       <div className="navbar__toggle" onClick={toggleMenu}>
@@ -34,4 +41,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
