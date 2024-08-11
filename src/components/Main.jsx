@@ -1,5 +1,5 @@
 import React from 'react';
-import SectionItem from './SectionItem';
+import SectionItem from './Section_infoItem';
 import "../styles/Main.scss";
 
 const creations = [
@@ -15,12 +15,12 @@ const creations = [
 
 const Main = () => {
   return (
-    <section className="gallery">
-      <div className="gallery__header">
+    <section className="cards">
+      <div className="cards__header">
         <h2>OUR CREATIONS</h2>
-        <button className="gallery__see-all">SEE ALL</button>
+        <button className="cards__see-all">SEE ALL</button>
       </div>
-      <div className="gallery__grid">
+      <div className="cards__grid">
         {creations.map((creation, index) => (
           <SectionItem key={index} title={creation.title} imageUrl={creation.imageUrl} />
         ))}
