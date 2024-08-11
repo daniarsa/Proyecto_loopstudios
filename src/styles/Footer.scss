@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+// Variables de Colores
+$white: hsl(0, 0%, 100%);
+$black: hsl(0, 0%, 0%);
+$dark-gray: hsl(0, 0%, 55%);
+$very-dark-gray: hsl(0, 0%, 41%);
+
+// Variables de Tipografía
+$font-body: 'Alata', sans-serif;
+$font-heading: 'Josefin Sans', sans-serif;
+
+// Layout de página
+$mobile-width: 375px;
+$desktop-width: 1440px;
+
+
+.footer {
+    background-color: $black;
+    color: $white;
+    padding: 2rem;
+    
+  
+    .footer__right{
+      margin-right: 10%;
+    }
+  
+    &__content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: $desktop-width;
+      margin: 0 auto;
+    }
+  
+    &__logo {
+      font-family: $font-body;
+      font-weight: 600;
+      font-size: 2rem;
+      margin-left: 20%
+    }
+  
+    &__links {
+    
+      display: flex;
+      list-style: none;
+      margin-top: 1rem;
+      margin-left: 11%;
+  
+      li {
+        margin-right: 2rem;
+
+  
+        a {
+          font-family: $font-heading;
+          font-weight: 300;
+          color: $white;
+          text-decoration: none;
+          font-size: 0.875rem;
+
+
+  
+          &:hover {
+            color: $white;
+            border-bottom: 2px $white solid;
+          }
+        }
+      }
+    }
+  
+    &__social {
+      display: flex;
+      margin-left: 30%;
+  
+      a {
+        color: $white;
+        font-size: 1.25rem;
+        margin-left: 0.4rem;
+  
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+  
+    &__copyright {
+      font-family: $font-body;
+      font-weight: 400;
+      font-size: 0.75rem;
+      margin-top: 1rem;
+      text-align: right;
+      color: $very-dark-gray;
+    }
+
+    .footer__social {
+        display: flex;
+        align-items: center;
+        
+    
+        a {
+          margin-right: 0.5rem;
+          display: inline-block;
+    
+          img {
+            width: 24px; // Ajusta el tamaño según sea necesario
+            height: 24px; // Ajusta el tamaño según sea necesario
+            margin-top: 1rem;
+          }
+    
+          &:hover {
+            display: flex;
+            list-style: none;
+            cursor: pointer;
+            border-bottom: 2px $white solid;
+            padding-bottom: 2%;
+            width: fit-content;
+          }
+        }
+      }
+    }
+    
+
+
+// Mixin para dispositivos móviles
+@mixin for-mobile {
+  @media (max-width: $mobile-width) {
+    @content;
+  }
+}
+
+// Mixin para dispositivos de escritorio
+@mixin for-desktop {
+  @media (min-width: $desktop-width) {
+    @content;
+  }
+}
+
+.footer {
+  background-color: $black;
+  color: $white;
+  padding: 2rem;
+
+  @include for-mobile {
+      padding: 1rem;
+      
+      &__content {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+      }
+
+      &__logo {
+          margin-left: 8%;
+          font-size: 1.25rem;
+      }
+
+      &__links {
+          flex-direction: column;
+          margin-left: 0;
+          margin-top: 2rem;
+
+          li {
+              margin-bottom: 1rem;
+
+              a {
+                  font-size: 1rem;
+              }
+          }
+      }
+
+      &__social {
+          margin-left: 25%;
+          margin-top: 1rem;
+
+          a {
+              margin-right: 1rem;
+
+              img {
+                  margin-top: 0.5rem;
+              }
+          }
+      }
+
+      &__copyright {
+        width: 100%;
+          text-align: center;
+          font-size: 0.875rem;
+          margin-top: 1.5rem;
+          margin-left: 8%;
+      }
+  }
+
+  @include for-desktop {
+      &__content {
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          max-width: $desktop-width;
+          margin: 0 auto;
+      }
+
+      &__logo {
+          margin-left: 20%;
+      }
+
+      &__links {
+          flex-direction: row;
+          margin-left: 11%;
+          margin-top: 0;
+
+          li {
+              margin-right: 2rem;
+
+              a {
+                  font-size: 0.875rem;
+              }
+          }
+      }
+
+      &__social {
+          margin-left: 30%;
+          margin-top: 0;
+
+          a {
+              margin-right: 0.4rem;
+
+              img {
+                  margin-top: 1rem;
+              }
+          }
+      }
+
+      &__copyright {
+          text-align: right;
+          font-size: 0.75rem;
+          margin-top: 0;
+      }
+  }
+}
