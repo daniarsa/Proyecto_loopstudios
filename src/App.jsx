@@ -15,7 +15,7 @@ const App = () => {
         <Header />
       </div>
       <div>
-      <Section_info />
+      {/* <Section_info /> */}
       <Main />
       </div>
     <Footer />

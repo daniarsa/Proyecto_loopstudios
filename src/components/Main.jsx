@@ -1,5 +1,6 @@
 import React from 'react';
 import SectionItem from './Section_infoItem';
+import Section_info from './Section_info';
 import "../styles/Main.scss";
 
 const creations = [
@@ -16,6 +17,7 @@ const creations = [
 const Main = () => {
   return (
     <section className="cards">
+      <Section_info/>
       <div className="cards__header">
         <h2>OUR CREATIONS</h2>
         <button className="cards__see-all">SEE ALL</button>
