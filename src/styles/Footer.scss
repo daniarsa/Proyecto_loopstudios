@@ -12,7 +12,7 @@ $font-body: 'Alata', sans-serif;
 $font-heading: 'Josefin Sans', sans-serif;
 
 // Layout de página
-$mobile-width: 375px;
+$mobile-width: 900px;
 $desktop-width: 1440px;
 
 
@@ -34,19 +34,16 @@ $desktop-width: 1440px;
       margin: 0 auto;
     }
   
-    &__logo {
-      font-family: $font-body;
-      font-weight: 600;
-      font-size: 2rem;
-      margin-left: 20%
+    .logo {
+      margin-left: 11.3rem;
+      margin-bottom: 1.2rem;
     }
   
     &__links {
-    
       display: flex;
       list-style: none;
       margin-top: 1rem;
-      margin-left: 11%;
+      margin-left: 1.2%;
   
       li {
         margin-right: 2rem;
@@ -106,6 +103,7 @@ $desktop-width: 1440px;
             width: 24px; // Ajusta el tamaño según sea necesario
             height: 24px; // Ajusta el tamaño según sea necesario
             margin-top: 1rem;
+            margin-bottom: 1rem;
           }
     
           &:hover {
@@ -201,7 +199,7 @@ $desktop-width: 1440px;
       }
 
       &__logo {
-          margin-left: 20%;
+          margin-left: 35%;
       }
 
       &__links {
@@ -236,5 +234,63 @@ $desktop-width: 1440px;
           font-size: 0.75rem;
           margin-top: 0;
       }
+  }
+}
+
+@media (max-width: 430px){
+  .footer {
+    background-color: $black;
+    color: $white;
+    padding: 2rem;
+  
+    @include for-mobile {
+        padding: 1rem;
+        
+        &__content {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+  
+        &__logo {
+            margin-left: 8%;
+            font-size: 1.25rem;
+        }
+  
+        &__links {
+            flex-direction: column;
+            margin-left: 0;
+            margin-top: 2rem;
+  
+            li {
+                margin-bottom: 1rem;
+  
+                a {
+                    font-size: 1rem;
+                }
+            }
+        }
+  
+        &__social {
+            margin-left: 25%;
+            margin-top: 1rem;
+  
+            a {
+                margin-right: 1rem;
+  
+                img {
+                    margin-top: 0.5rem;
+                }
+            }
+        }
+  
+        &__copyright {
+          width: 100%;
+            text-align: center;
+            font-size: 0.875rem;
+            margin-top: 1.5rem;
+            margin-left: 8%;
+        }
+    }
   }
 }

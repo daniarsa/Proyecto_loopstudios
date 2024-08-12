@@ -1,5 +1,16 @@
 .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: white;
+  margin-top: 2%;
+  margin-left: 18.2%;
+  }
+
+
+  @media (max-width: 1024px) {
+    .logo{
+      margin-left: 10%;
+    }
+  }
+  @media (max-width: 431px) {
+    .logo{
+      margin-left: 1%;
+    }
   }
