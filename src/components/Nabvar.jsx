@@ -21,8 +21,10 @@ const Navbar = () => {
 
   return (
     <header className="navbar">
-      <Logo />
+      {!isMenuOpen && <Logo />}
       <nav className={`navbar__menu ${isMenuOpen ? 'navbar__menu--open' : ''}`}>
+      {isMenuOpen && <Logo />}
+
         <ul>
           {links.map((link, index) => (
             <li key={index}>
