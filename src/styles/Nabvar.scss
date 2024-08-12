@@ -81,6 +81,21 @@ $font-heading: 'Josefin Sans', sans-serif;
         top: 4%;
         margin-right: 30%;
 
+        @media (min-width: 430px) {
+          margin-right: 45%;
+          margin-top: 1%;
+        }
+
+        @media (min-width: 500px) {
+          margin-right: 55.5%;
+          margin-top: 1%;
+        }
+
+        @media (min-width: 600px) {
+          margin-right: 58%;
+          margin-top: 1%;
+        }
+
         @media (min-width: 768px) {
           margin-right: 55%;
           margin-top: 2%;
