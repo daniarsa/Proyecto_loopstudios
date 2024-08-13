@@ -56,19 +56,19 @@ $desktop-width: 1440px;
 
     @media (min-width: 768px) and (max-width: 1024px) {
       .Section_info{
-      flex-direction: column; /* Cambia a diseño en columna */
+      flex-direction: column; 
       padding: 50px;
+
+      &__image {
+        max-height: 50em;
+      }
   
       &__content {
         position: static;
         transform: none;
         padding: 40px;
         max-width: 700px;
-        text-align: center; /* Centra el texto */
-      }
-  
-      &__image {
-        max-height: 50em;
+        text-align: center; 
       }
     }
   } 
@@ -76,7 +76,14 @@ $desktop-width: 1440px;
   @media (max-width: 767px) {
     .Section_info{
     flex-direction: column;
+    height: auto;
     padding: 20px;
+
+    &__image {
+      height: auto;
+      width: 56em;
+      margin-bottom: 20px;
+    }
   
     &__content {
       position: static;
@@ -84,12 +91,6 @@ $desktop-width: 1440px;
       padding: 20px;
       max-width: 100%;
       text-align: center;
-    }
-  
-    &__image {
-      height: auto;
-      width: 100%;
-      margin-bottom: 20px;
     }
   }
   }
