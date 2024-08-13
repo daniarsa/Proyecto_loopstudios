@@ -1,11 +1,12 @@
 import React from 'react';
 import "../styles/Section_info.scss";
+import Interactive from "../assets/img/desktop/image-interactive.jpg";
 
 const Section_info = () => {
   return (
     <section className="Section_info">
       <div className="Section_info__image">
-        <img src="src/assets/img/desktop/image-interactive.jpg" alt="" />
+      <img src={Interactive} alt="Image Section_info" />
       </div>
       <div className="Section_info__content">
         <h1>THE LEADER IN INTERACTIVE VR</h1>
