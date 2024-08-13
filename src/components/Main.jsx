@@ -1,10 +1,11 @@
 import React from 'react';
 import SectionItem from './Section_infoItem';
 import Section_info from './Section_info';
+import deep from '../assets/img/desktop/image-deep-earth.jpg';
 import "../styles/Main.scss";
 
 const creations = [
-  { title: 'DEEP EARTH', imageUrl: 'src/assets/img/desktop/image-deep-earth.jpg' },
+  { title: 'DEEP EARTH', imageUrl: deep},
   { title: 'NIGHT ARCADE', imageUrl: 'src/assets/img/desktop/image-night-arcade.jpg' },
   { title: 'SOCCER TEAM VR', imageUrl: 'src/assets/img/desktop/image-soccer-team.jpg' },
   { title: 'THE GRID', imageUrl: 'src/assets/img/desktop/image-grid.jpg' },
