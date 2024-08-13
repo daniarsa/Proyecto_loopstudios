@@ -1,6 +1,6 @@
 import React from 'react';
 import "../styles/Logo.scss";
-import logo from "../assets/img/icons/logo.svg"; // Adjust the path as necessary
+import logo from "../assets/img/icons/logo.svg";
 
 const Logo = () => {
   return (
