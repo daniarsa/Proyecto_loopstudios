@@ -27,9 +27,9 @@ $desktop-width: 1440px;
       margin-bottom: 20px;
   
       h2 {
-        font-family: $font-body;
+        font-family: $font-heading;
         font-size: 1.8rem;
-        font-weight: 400;
+        font-weight: 300;
       }
   
       .cards__see-all {
@@ -38,6 +38,8 @@ $desktop-width: 1440px;
         padding: 10px 20px;
         border: 2px solid $black;
         font-weight: bold;
+        font-family: $font-heading;
+        font-weight: 300;
         cursor: pointer;
         font-size: 1rem;
         transition: background-color 0.3s ease, color 0.3s ease;
@@ -72,6 +74,8 @@ $desktop-width: 1440px;
         bottom: 10px;
         left: 10px;
         color: $white;
+        font-family: $font-heading;
+        font-weight: 300;
         font-size: 1.2rem;
         text-transform: uppercase;
         letter-spacing: 2px;
@@ -88,4 +92,45 @@ $desktop-width: 1440px;
         color: black; /* Cambia el color del texto a negro al pasar el cursor */
       }
     }
+  }
+
+  @media (max-width: 1024px) {
+    .cards__grid {
+      grid-template-columns: repeat(2, 1fr); /* Dos columnas en tabletas */
+      gap: 20px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .cards{
+    padding: 20px; /* Reduce padding para mobile */
+  
+    .cards__header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  
+      h2 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+      }
+  
+      &__see-all {
+        padding: 10px 20px;
+      }
+    }
+  
+    .cards__grid {
+      grid-template-columns: 1fr; /* Una columna en mobile */
+      gap: 10px;
+    }
+  
+    .cards-item {
+      &__title {
+        bottom: 10px;
+        left: 10px;
+        font-size: 1rem; /* Ajusta el tamaño de fuente para mobile */
+      }
+    }
+  }
   }
